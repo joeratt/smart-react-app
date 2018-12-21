@@ -1,13 +1,19 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import 'fhirclient';
+import FHIR from 'fhirclient';
+
+
+var ReactRouter = require('react-router-dom');
+var Route = ReactRouter.Route;
+var Switch = ReactRouter.Switch;
+var HashRouter = ReactRouter.HashRouter;
 
 const SuperDuper = (props) => {
     console.log("joe");
 
     return (
-        <div></div>
+        <div>joe</div>
     );
     /**/
 };
@@ -33,7 +39,7 @@ class App extends React.Component {
         this.PatientList();
     }
 
-    defaultPatient(){
+    static defaultPatient(){
         return {
             fname: {value: ''},
             lname: {value: ''},
@@ -49,7 +55,7 @@ class App extends React.Component {
 
     PatientList() {
 
-        window.FHIR.oauth2.ready((smart) => {
+        FHIR.oauth2.ready((smart) => {
             console.log("yay!");
 
             let patient = smart.patient;
@@ -62,7 +68,7 @@ class App extends React.Component {
                     let fname = '';
                     let lname = '';
 
-                    let p = this.defaultPatient();
+                    let p = App.defaultPatient();
                     p.birthdate = patient.birthDate;
                     p.gender = gender;
                     p.fname = fname;
