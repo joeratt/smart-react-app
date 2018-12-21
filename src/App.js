@@ -33,6 +33,20 @@ class App extends React.Component {
         this.PatientList();
     }
 
+    defaultPatient(){
+        return {
+            fname: {value: ''},
+            lname: {value: ''},
+            gender: {value: ''},
+            birthdate: {value: ''},
+            height: {value: ''},
+            systolicbp: {value: ''},
+            diastolicbp: {value: ''},
+            ldl: {value: ''},
+            hdl: {value: ''},
+        };
+    }
+
     PatientList() {
 
         window.FHIR.oauth2.ready((smart) => {
@@ -40,8 +54,20 @@ class App extends React.Component {
 
             let patient = smart.patient;
             let pt = patient.read().then(
-                (({patients}) => {
-                    console.log(patients)
+                (({patient}) => {
+                    console.log(patient);
+
+                    let gender = patient.gender;
+
+                    let fname = '';
+                    let lname = '';
+
+                    let p = this.defaultPatient();
+                    p.birthdate = patient.birthDate;
+                    p.gender = gender;
+                    p.fname = fname;
+                    p.lname = lname;
+
                 })
             );
             //
@@ -68,6 +94,8 @@ class App extends React.Component {
         );
     }
 }
+
+
 
 const Patient = (props) => {
     return (
