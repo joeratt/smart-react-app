@@ -1,16 +1,19 @@
 {
+  "homepage": "http://joeratt.github.io/smart-react-app",
   "name": "smart-react-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "fhirclient": "^0.1.12"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

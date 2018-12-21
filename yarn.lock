@@ -3136,6 +3136,10 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "^2.0.0"
 
+fhirclient@^0.1.12:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/fhirclient/-/fhirclient-0.1.12.tgz#d9529de1f5c63b76120038a6898382bfc500d916"
+
 figgy-pudding@^3.1.0, figgy-pudding@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/figgy-pudding/-/figgy-pudding-3.5.1.tgz#862470112901c727a0e495a80744bd5baa1d6790"
@@ -6695,7 +6699,7 @@ react-dev-utils@^6.1.1:
     strip-ansi "4.0.0"
     text-table "0.2.0"
 
-react-dom@16.7.0:
+react-dom@^16.7.0:
   version "16.7.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.7.0.tgz#a17b2a7ca89ee7390bc1ed5eb81783c7461748b8"
   dependencies:
@@ -6762,7 +6766,7 @@ react-scripts@2.1.1:
   optionalDependencies:
     fsevents "1.2.4"
 
-react@16.7.0:
+react@^16.7.0:
   version "16.7.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.7.0.tgz#b674ec396b0a5715873b350446f7ea0802ab6381"
   dependencies:
