@@ -1,5 +1,3 @@
-import 'fhirclient';
-
 console.log("authorizing");
 console.log("authorizing again!");
 
